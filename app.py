@@ -79,7 +79,7 @@ if "aveon_messages" not in st.session_state:
 # ══════════════════════════════════════════════════════════════════════════════
 # 🤖 PERSISTENT GLOBAL BOT ENGINES (RUNS ON EVERY PAGE EXCLUDING "🤖 AI Counselor")
 # ══════════════════════════════════════════════════════════════════════════════
-if navigation_target != "🤖 AI Counselor":
+if navigation_target != "🤖AI Counselor":
     st.markdown('<div class="aveon-top-icon-container">', unsafe_allow_html=True)
     
     col_icon1, col_icon2 = st.columns([12, 2.2])
@@ -110,7 +110,7 @@ if navigation_target != "🤖 AI Counselor":
 # 🏠 HOME VIEW
 # ══════════════════════════════════════════════════════════════════════════════
 if navigation_target == "🏠 Home":
-    st.title("🎓 SmartCET AI Counselor")
+    st.title(" PragyanAI SmartCET AI Counselor")
     st.subheader("Karnataka CET College Admission Platform — Powered by AI")
 
     c1, c2, c3, c4 = st.columns(4)
@@ -137,7 +137,7 @@ if navigation_target == "🏠 Home":
 # 👤 STUDENT PROFILE ANALYZER
 # ══════════════════════════════════════════════════════════════════════════════
 elif navigation_target == "👤 Student Profile":
-    st.title("👤 Student Profile Analyzer")
+    st.title("PragyanAI - Student Profile Analyzer")
     st.caption("Establish baseline student parameters to activate background predictive models.")
 
     with st.form("profile_form"):
@@ -194,7 +194,7 @@ elif navigation_target == "👤 Student Profile":
 # 🏫 COLLEGE RECOMMENDATION ENGINE
 # ══════════════════════════════════════════════════════════════════════════════
 elif navigation_target == "🏫 College Recommendations":
-    st.title("🏫 Strategic Tiered College Recommendation Engine")
+    st.title(" PragyanAI Strategic Tiered College Recommendation Engine")
 
     if "rank" not in st.session_state or st.session_state["rank"] is None:
         st.warning("⚠️ Profile parameters uninitialized. Configure variables in **Student Profile** analyzer view first.")
@@ -268,7 +268,7 @@ elif navigation_target == "🏫 College Recommendations":
 # 🎯 ADMISSION PROBABILITY PREDICTOR
 # ══════════════════════════════════════════════════════════════════════════════
 elif navigation_target == "🎯 Admission Predictor":
-    st.title("🎯 Multi-Branch Entry Predictor")
+    st.title("PragyanAI Multi-Branch Entry Predictor")
 
     if "rank" not in st.session_state or st.session_state["rank"] is None:
         st.warning("⚠️ Profile parameters missing. Initialize vectors via **Student Profile** menu tab.")
@@ -312,7 +312,7 @@ elif navigation_target == "🎯 Admission Predictor":
 # 🤖 DEDICATED AI COUNSELOR CHATBOT HUB (BOT BUTTON WILL DISAPPEAR ON THIS VIEW)
 # ══════════════════════════════════════════════════════════════════════════════
 elif navigation_target == "🤖 AI Counselor":
-    st.title("🤖 Dedicated AI Counselor Chatbot Hub")
+    st.title("PragyanAI Dedicated AI Counselor Chatbot Hub")
     st.caption("Semantic Conversational Admissions Intelligence Layer Powered by Groq LLaMA3.1")
 
     if "messages" not in st.session_state:
@@ -359,7 +359,7 @@ elif navigation_target == "🤖 AI Counselor":
 # 📊 ANALYTICS DASHBOARD
 # ══════════════════════════════════════════════════════════════════════════════
 elif navigation_target == "📊 Analytics":
-    st.title("📊 Structural Analytics Dashboard")
+    st.title(" PragyanAI Structural Analytics Dashboard")
 
     df = pd.DataFrame(COLLEGES)
     df["roi_score"] = (df["avg_package"] / (df["total_fee"] * 4)).round(2)
